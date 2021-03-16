@@ -8,18 +8,15 @@ import HomePageProvider from '@/providers/homePageProvider';
 import SelectPeople from './components/selectPeople';
 import List from './components/list';
 
-const HomePage: React.FC<unknown> = () => {
-  console.log('hihi');
-  return (
-    <HomePageProvider>
-      <Form layout="vertical">
-        <Form.Item label="Add people to the list">
-          <SelectPeople />
-        </Form.Item>
-      </Form>
-      <List />
-    </HomePageProvider>
-  );
-};
+const HomePage: React.FC<unknown> = () => (
+  <HomePageProvider>
+    <Form layout="vertical">
+      <Form.Item label="Add people to the list">
+        <SelectPeople />
+      </Form.Item>
+    </Form>
+    <List />
+  </HomePageProvider>
+);
 
 export default HomePage;
